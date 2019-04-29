@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      User Admin
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-button (click)='create()'>Add</ion-button>
+  <ion-list *ngFor='let item of items'>
+    <ion-item>
+    <ion-label>item</ion-label>
+    </ion-item>
+  </ion-list>
+  <ion-footer>
+    <ion-button (click)='logout()'>Logout</ion-button>
+  </ion-footer>
+</ion-content>

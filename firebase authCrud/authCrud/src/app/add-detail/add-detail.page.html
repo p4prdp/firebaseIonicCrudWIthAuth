@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>add-detail</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+    <form  #form="ngForm" (ngSubmit)="add(form)">
+        <ion-grid>
+          <ion-row color="primary" justify-content-center>
+            <ion-col align-self-center size-md="6" size-lg="5" size-xs="12">
+              <div text-center>
+                <h3>Add List</h3>
+              </div>
+              <div padding>
+                <ion-item>
+                  <ion-input  name="title" type="text" placeholder="Enter Title" ngModel required></ion-input>
+                </ion-item>                
+                <ion-item>                  
+                  <ion-textarea name="description" placeholder="enter the description" ngModel required></ion-textarea>
+                </ion-item>                
+              </div>
+              <div padding>
+                <ion-button  size="large" type="submit" [disabled]="form.invalid" expand="block">Add</ion-button>
+              </div>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </form>
+
+</ion-content>
